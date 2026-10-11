@@ -16,7 +16,7 @@
 
 ## Installer
 
-Télécharger le `.deb` de la [dernière version](https://github.com/melvincouwez-alt/paraphe/releases/latest), puis :
+Télécharger le `.deb` de la [dernière version](https://github.com/Melvin-Cwz/paraphe/releases/latest), puis :
 
 ```
 sudo apt install ./paraphe_<version>_amd64.deb

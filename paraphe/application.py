@@ -98,7 +98,7 @@ class Application(Gtk.Application):
             logo_icon_name=APP_ID, comments="Annoter, remplir, signer, fusionner et découper des PDF.",
             license_type=Gtk.License.AGPL_3_0, authors=["Les contributeurs de Paraphe"],
             copyright="© 2026 les contributeurs de Paraphe",
-            website="https://github.com/melvincouwez-alt/paraphe")
+            website="https://github.com/Melvin-Cwz/paraphe")
         dialog.add_credit_section("Bibliothèques utilisées", ["PyMuPDF (Artifex, AGPL)", "pyHanko (Matthias Valvekens, MIT)",
                                                "uharfbuzz (HarfBuzz, Apache-2.0)", "fontTools (MIT)",
                                                "GTK et Granite (elementary)"])

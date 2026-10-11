@@ -16,7 +16,7 @@ A PDF editor for elementary OS, written in Python with GTK 4 and Granite. The in
 
 ## Install
 
-Download the `.deb` from the [latest release](https://github.com/melvincouwez-alt/paraphe/releases/latest), then:
+Download the `.deb` from the [latest release](https://github.com/Melvin-Cwz/paraphe/releases/latest), then:
 
 ```
 sudo apt install ./paraphe_<version>_amd64.deb

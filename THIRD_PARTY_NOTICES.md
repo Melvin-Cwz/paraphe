@@ -9,7 +9,7 @@ anglais, sans modification.
 | Paquet | Version | Licence |
 |---|---|---|
 | [aiohappyeyeballs](https://github.com/aio-libs/aiohappyeyeballs) | 2.7.1 | PSF-2.0 |
-| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.4 | Apache-2.0 AND MIT |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | 3.14.5 | Apache-2.0 AND MIT |
 | [aiosignal](https://github.com/aio-libs/aiosignal) | 1.4.0 | Apache 2.0 |
 | [asn1crypto](https://github.com/wbond/asn1crypto) | 1.5.1 | MIT |
 | [attrs](https://github.com/python-attrs/attrs) | 26.1.0 | MIT |
@@ -20,10 +20,10 @@ anglais, sans modification.
 | [frozenlist](https://github.com/aio-libs/frozenlist) | 1.8.0 | Apache-2.0 |
 | [idna](https://github.com/kjd/idna) | 3.20 | BSD-3-Clause |
 | [lxml](https://github.com/lxml/lxml) | 6.1.3 | BSD-3-Clause |
-| [multidict](https://github.com/aio-libs/multidict) | 6.9.1 | Apache License 2.0 |
+| [multidict](https://github.com/aio-libs/multidict) | 7.1.0 | Apache-2.0 |
 | [oscrypto](https://github.com/wbond/oscrypto) | 1.3.0 | MIT |
 | [propcache](https://github.com/aio-libs/propcache) | 0.5.4 | Apache-2.0 |
-| [pycparser](https://github.com/eliben/pycparser) | 3.1 | BSD-3-Clause |
+| [pycparser](https://github.com/eliben/pycparser) | 3.11 | BSD-3-Clause |
 | [pyHanko](https://github.com/MatthiasValvekens/pyHanko) | 0.37.0 | MIT |
 | [pyhanko-certvalidator](https://github.com/MatthiasValvekens/pyHanko/tree/master/pkgs/pyhanko-certvalidator) | 0.32.1 | MIT |
 | [pymupdf](https://github.com/pymupdf/pymupdf) | 1.28.2 | AGPL-3.0 (double licence, Paraphe suit l'AGPL) |
@@ -345,7 +345,7 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ````
 
-## aiohttp 3.14.4
+## aiohttp 3.14.5
 
 `licenses/LICENSE.txt`
 
@@ -1982,7 +1982,7 @@ be used in advertising or otherwise to promote the sale, use or other deal-
 ings in this Software without prior written authorization from him.
 ````
 
-## multidict 6.9.1
+## multidict 7.1.0
 
 `licenses/LICENSE`
 
@@ -2442,7 +2442,7 @@ Copyright 2016-2021, Andrew Svetlov and aio-libs team
    limitations under the License.
 ````
 
-## pycparser 3.1
+## pycparser 3.11
 
 `licenses/LICENSE`
 

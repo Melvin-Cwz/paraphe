@@ -45,12 +45,12 @@ cat > "$stage/DEBIAN/control" <<CONTROL
 Package: paraphe
 Version: $version
 Architecture: $arch
-Maintainer: Paraphe <301110918+melvincouwez-alt@users.noreply.github.com>
+Maintainer: Paraphe <301110918+Melvin-Cwz@users.noreply.github.com>
 Installed-Size: $size
 Depends: python3 (>= 3.12), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-granite-7.0
 Section: graphics
 Priority: optional
-Homepage: https://github.com/melvincouwez-alt/paraphe
+Homepage: https://github.com/Melvin-Cwz/paraphe
 Description: éditeur de PDF pour elementary OS
  Annoter des PDF (surligner, souligner, barrer, écrire, ajouter des notes,
  dessiner), remplir des formulaires, signer de façon manuscrite ou avec un
