@@ -99,10 +99,10 @@ class Application(Gtk.Application):
             license_type=Gtk.License.AGPL_3_0, authors=["Les contributeurs de Paraphe"],
             copyright="© 2026 les contributeurs de Paraphe",
             website="https://github.com/melvincouwez-alt/paraphe")
-        dialog.add_credit_section("Bâti sur", ["PyMuPDF (Artifex, AGPL)", "pyHanko (Matthias Valvekens, MIT)",
+        dialog.add_credit_section("Bibliothèques utilisées", ["PyMuPDF (Artifex, AGPL)", "pyHanko (Matthias Valvekens, MIT)",
                                                "uharfbuzz (HarfBuzz, Apache-2.0)", "fontTools (MIT)",
                                                "GTK et Granite (elementary)"])
-        dialog.add_credit_section("Icône", ["Courbe du symbole PDF tirée des icônes elementary (GPL-3.0)"])
+        dialog.add_credit_section("Icône", ["Courbe du symbole PDF reprise des icônes elementary (GPL-3.0)"])
         dialog.present()
 
     # Development: PARAPHE_DEV_SCRIPT runs a Python file with the window in

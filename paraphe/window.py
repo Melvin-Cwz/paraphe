@@ -490,7 +490,7 @@ class Window(Gtk.ApplicationWindow):
             window = self._target_window()
             window.set_document(merged)
             window.set_mode("pages")
-            window.toast(f"{len(paths)} fichiers fusionnés : réordonnez les pages puis enregistrez")
+            window.toast(f"{len(paths)} fichiers fusionnés. Réordonnez les pages, puis enregistrez le document")
         dialog.open_multiple(self, None, done)
 
     def choose_insert(self):
@@ -597,9 +597,9 @@ class Window(Gtk.ApplicationWindow):
 
     def _confirm_break_signatures(self, then):
         dialog = Granite.MessageDialog.with_image_from_icon_name(
-            "Ce document porte une signature numérique",
-            "L'enregistrer à la place de l'original rendra cette signature invalide. "
-            "Vous pouvez plutôt enregistrer une copie.",
+            "Ce document contient une signature numérique",
+            "Enregistrer les modifications dans le fichier d'origine invalidera cette signature. "
+            "Vous pouvez plutôt enregistrer une copie du document.",
             "dialog-warning", Gtk.ButtonsType.NONE)
         dialog.add_button("Annuler", Gtk.ResponseType.CANCEL)
         dialog.add_button("Remplacer quand même", 1).add_css_class("destructive-action")
@@ -646,7 +646,7 @@ class Window(Gtk.ApplicationWindow):
             except Exception as error:
                 self.error("Enregistrement impossible", str(error))
                 return
-            self.toast("Copie aplatie enregistrée : annotations et champs y sont figés")
+            self.toast("Copie aplatie enregistrée : les annotations et les champs y sont figés")
         self._save_dialog("Enregistrer une copie aplatie", f"{self._stem()}-aplati.pdf", done)
 
     def extract_pages(self):
@@ -828,7 +828,7 @@ class Window(Gtk.ApplicationWindow):
     def delete_pages(self):
         pages = self._target_pages()
         if len(pages) >= self.document.page_count:
-            self.toast("Un document garde au moins une page")
+            self.toast("Un document doit contenir au moins une page")
             return
         self.document.edit(lambda doc: doc.delete_pages(pages))
         self.toast(f"{len(pages)} page{'s' if len(pages) > 1 else ''} supprimée{'s' if len(pages) > 1 else ''}",
@@ -874,7 +874,7 @@ class Window(Gtk.ApplicationWindow):
             return
         self.set_tool("signature")
         self.viewer.signature = signature
-        self.toast("Cliquez sur la page pour placer la signature, ou tracez sa taille")
+        self.toast("Cliquez sur la page pour placer la signature, ou tracez un cadre pour choisir sa taille")
 
     def _on_certificate(self, menu):
         if not self.document:
@@ -948,7 +948,7 @@ class Window(Gtk.ApplicationWindow):
             return False
         dialog = Granite.MessageDialog.with_image_from_icon_name(
             f"Enregistrer les modifications de « {self.document.title} » ?",
-            "Sinon, elles seront perdues.", "dialog-warning", Gtk.ButtonsType.NONE)
+            "Si vous fermez sans enregistrer, les modifications seront perdues.", "dialog-warning", Gtk.ButtonsType.NONE)
         dialog.add_button("Fermer sans enregistrer", 1).add_css_class("destructive-action")
         dialog.add_button("Annuler", Gtk.ResponseType.CANCEL)
         dialog.add_button("Enregistrer", Gtk.ResponseType.ACCEPT).add_css_class("suggested-action")

@@ -109,7 +109,7 @@ class SplitDialog(_Dialog):
             self.after.set_label(f"Couper après la page {pages}" if len(self.selected) == 1
                                  else f"Couper après les pages {pages}")
         else:
-            self.after.set_label("Couper après les pages sélectionnées (aucune)")
+            self.after.set_label("Couper après les pages sélectionnées (aucune page sélectionnée)")
         self.body.append(self.after)
         every = Gtk.Box(spacing=6)
         self.every = Gtk.CheckButton(label="Toutes les", group=self.each)
@@ -172,7 +172,7 @@ class SplitDialog(_Dialog):
             try:
                 ranges = parse_ranges(self.ranges.get_text(), count)
             except ValueError:
-                self.error(f"Plages non comprises. Exemple : 1-3, 4, 5-{count}")
+                self.error(f"Plages de pages non reconnues. Exemple : 1-3, 4, 5-{count}")
                 return
         stem = self.stem.get_text().strip() or "document"
         self.emit("split", ranges, self.folder, stem)
@@ -188,8 +188,8 @@ class CertificateDialog(_Dialog):
     def __init__(self, parent):
         super().__init__(parent, "Signature numérique", "Continuer")
         intro = Gtk.Label(
-            label="Signe le document avec votre certificat. Toute modification ultérieure "
-                  "du fichier rendra la signature invalide.", wrap=True, xalign=0, max_width_chars=50)
+            label="Paraphe signe le document avec votre certificat. Toute modification ultérieure "
+                  "du fichier invalidera la signature.", wrap=True, xalign=0, max_width_chars=50)
         intro.add_css_class("dim-label")
         self.body.append(intro)
         grid = Gtk.Grid(column_spacing=12, row_spacing=8)
@@ -199,7 +199,7 @@ class CertificateDialog(_Dialog):
         self.password = Gtk.PasswordEntry(show_peek_icon=True)
         self.reason = Gtk.Entry(placeholder_text="Facultatif")
         self.location = Gtk.Entry(placeholder_text="Facultatif")
-        self.visible = Gtk.CheckButton(label="Signature visible : tracer sa place sur la page", active=True)
+        self.visible = Gtk.CheckButton(label="Signature visible : tracer son emplacement sur la page", active=True)
         for row, (label, widget) in enumerate((("Certificat", self.cert_button),
                                                ("Mot de passe", self.password),
                                                ("Motif", self.reason), ("Lieu", self.location))):
